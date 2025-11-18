@@ -10,6 +10,7 @@ def main():
     screen = pg.display.set_mode((800, 600))
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg")
+    bg_img2 = pg.transform.flip(bg_img,True,False)
     kk_img = pg.image.load("fig/3.png") #操作したところ
     kk_img = pg.transform.flip(kk_img,True, False)
     tmr = 0
@@ -19,10 +20,11 @@ def main():
 
         x = tmr
         screen.blit(bg_img, [-x, 0])
+        screen.blit(bg_img,[-x+1600,0])
         screen.blit(kk_img,[300,200])
         pg.display.update()
         tmr += 1
-        clock.tick(10)
+        clock.tick(200)
 
 
 if __name__ == "__main__":
