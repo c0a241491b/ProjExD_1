@@ -21,11 +21,11 @@ def main():
         move_y = 0 
         if key_lst[pg.K_UP]:
             move_y -= 1
-        elif key_lst[pg.K_DOWN]:
+        if key_lst[pg.K_DOWN]:
             move_y += 1
-        elif key_lst[pg.K_LEFT]:
+        if key_lst[pg.K_LEFT]:
             move_x -= 1
-        elif key_lst[pg.K_RIGHT]:
+        if key_lst[pg.K_RIGHT]:
             move_x += 2
         return (move_x,move_y)
     while True:
